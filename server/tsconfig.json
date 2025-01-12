@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",               // コンパイル後のJavaScriptのターゲットをES2020に設定
+    "module": "CommonJS",              // モジュールシステムをCommonJSに設定 (Node.jsで一般的)
+    "strict": true,                    // 厳格モード (型安全を強化)
+    "esModuleInterop": true,           // ESモジュールとCommonJSモジュールの互換性を持たせる
+    "skipLibCheck": true,              // 型定義のチェックをスキップ
+    "outDir": "./dist",                // コンパイル後のJavaScriptファイルの出力先
+    "rootDir": "./src",                // ソースファイルのルートディレクトリ
+    "resolveJsonModule": true,         // JSONファイルをモジュールとしてインポート可能にする
+    "types": ["node", "ws"]            // Node.jsとwsライブラリの型定義をインクルード
+  },
+  "include": [
+    "src/**/*.ts"                      // コンパイル対象となるTypeScriptファイル
+  ],
+  "exclude": [
+    "node_modules"                     // node_modulesディレクトリはコンパイル対象外
+  ]
+}
